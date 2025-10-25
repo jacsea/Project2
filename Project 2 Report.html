@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://dsc106.com/projects/project2_report.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Project 2 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      /* Headings */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Project 2</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Jacob Sease</strong>
+    </header>
+
+    <main>
+      <h2>Proposition: Kentucky and Missouri make the biggest changes regarding abortion</h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="Percent Change Graph.png" alt="">
+          <figcaption>Graph depicting the percent change of the number of abortion clinics from 2017-2020</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>Used a line graph to implicate trend over time (-1)</li>
+          <li>Used percent change as the y-axis variable, which both increases the y-axis scale to make it appear that there is more change and the value of percent change favors some states in this visualization (-1)</li>
+          <li>Highlighted the states important in this graph and the contrary graph (2)</li>
+          <li>Color was not based on a diverging color palette to implicate a good or bad connotation based on graph position, rather each state is assigned a random color (2)</li>
+          <li>An average line was added to show the average percent change (1)</li>
+          <li>Started each line at 0 to show the percent change from 0 (1)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="Raw Change Graph.png" alt="">
+          <figcaption>Graph depicting the absolute change of the number of abortion clinics from 2017-2020</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>Used a line graph to implicate trend over time (-1)</li>
+          <li>Used absolute change as the y-axis variable, which changes which states appear to make the most changes in the number of abortion clinics (-1)</li>
+          <li>Highlighted the states important in this graph and the contrary graph (2)</li>
+          <li>Color was not based on a diverging color palette to implicate a good or bad connotation based on graph position, rather each state is assigned a random color (2)</li>
+          <li>An average line was added to show the average change (1)</li>
+          <li>Started each line at 0 to show the change from 0 (1)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>
+          My design process began with going over all four datasets, and trying to come up with visualizations that could work as a pair 
+          that contrast each other. Each dataset had many variables, which made it harder to narrow it down to a specific topic. 
+          I eventually landed on the dataset which collected abortion data from the Guttmacher Institute. 
+          While I realized there were many different complex visualizations that could be drawn from the dataset, I decided on a rather 
+          simple one.           
+        </p>
+
+        <p>
+          The main deception employed in my visualization is the different type of change of the y-axis, from percent change to absolute change of the number of
+          abortion clinics from 2017-2020. While each graph is trying to get across the same information by using the change of abortion clinics, 
+          the different types of change each graph shows is deceptive. Because of the change of variable, even though each graph is attempting to show the same thing, the change in abortion clinics, 
+          vastly different conclusions can be made from each chart. The only other thing that may be deemed deceptive was making the mark a line, which implies trend over time. 
+          While it is true that this does happen over time, arbitrarily starting the lines at 0 alongside the fact that there was no data for the years between 2017 and 2020,
+          helps in the deception of the visualization. I purposely kept each graph simple and 
+          similar to each other to make them easy to read and draw conclusions from, and also to show how drastic the change can be when 
+          visualizing percent change versus absolute change. Other than that each graph is completely earnest. 
+          Annotations were not added as each graph was meant to show visual disparity between states, not necessarily a numercial difference. 
+          The titles and axes titles are all correct and the colors do not implicate anything good or bad, which is important with a controversial topic like abortion. 
+        </p>
+
+        <p>
+          I thought this visualization was interesting as both graphs are aiming to display the same data on the same topic but show it in different ways. 
+          While both graphs are technically true, each one does not tell the whole truth. 
+          The change in y-axis from percent change to absolute change paints a drastically different picture of the data. It is easy 
+          to imagine how each graph could be used to sway perception a certain way, and especially with small tweaks like color it could be used 
+          to push even further towards certain agendas. In my opinion, both of these graphs fall more towards misleading than persuasive. 
+          Percent change is easily skewed as while Kentucky has by far the largest percent change of 100%, that is because it went from one clinic 
+          to two clinics. But California having the highest absolute change of 12 is not reflective of that fact that it already had 161 clinics 
+          making it a less impactful relative change. In my opinion, a more earnest visualization would add both absolute and percent change, 
+          a simple example being the same absolute change plot above, but with percent change annotated to the side of the state name. 
+        </p>
+      </section>
+    </main>
+  
+
+</body></html>
